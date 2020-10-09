@@ -427,3 +427,42 @@ table {
 }
 
 /* end of contact */
+
+/* footer */
+.footer {
+  background-color: #8e938c;
+  color: #373a36;
+  font-size: 1.6rem;
+  grid-column: 2 / 10;
+  grid-row: 9 / 10;
+  padding: 2rem 0 3rem 0;
+  text-align: center;
+}
+
+.company-logo {
+  color: #eece1a;
+  cursor: pointer;
+  font-weight: bold;
+}
+.company-logo:hover {
+  color: #373a36;
+}
+
+/* end of footer */
+
+@keyframes anim {
+  0% {
+    left: 40%;
+  }
+  50% {
+    left: 60%;
+  }
+  75% {
+    left: 45%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+/* end of footer */
