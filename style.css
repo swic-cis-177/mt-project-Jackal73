@@ -384,3 +384,46 @@ table {
 }
 
 /* end of modal box */
+
+/* contact */
+.contact {
+  background-color: #373a36;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-column-gap: 3rem;
+  grid-row: 8 / 9;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem 0;
+}
+
+.contact-heading {
+  color: #fff;
+  font-size: 2rem;
+  justify-self: end;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.contact-input {
+  border-radius: 5rem 0 0 5rem;
+  border-right: none;
+  font-weight: bold;
+}
+
+.contact-btn {
+  background-color: #8e938c;
+  border-left: none;
+  border-radius: 0 5rem 5rem 0;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-btn:hover {
+  background-color: #373a36;
+  color: #eece1a;
+}
+
+/* end of contact */
