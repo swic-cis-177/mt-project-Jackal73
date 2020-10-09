@@ -95,3 +95,60 @@ body {
   font-size: 1.8rem;
   margin-right: 1rem;
 }
+
+.second-nav {
+  border-bottom: 0.1rem solid #eece1a;
+  border-top: 0.1rem solid #eece1a;
+  grid-column: 2 / 10;
+  grid-row: 3;
+}
+
+.second-nav-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  list-style: none;
+}
+
+.second-nav-link {
+  color: #373a36;
+  display: grid;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 0.8rem 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s 0.1s;
+}
+
+.second-nav-item:hover .second-nav-link {
+  background-color: #373a36;
+  color: #eece1a;
+}
+
+.second-nav-link::before,
+.second-nav-link::after {
+  background-color: #eece1a;
+  content: "";
+  display: block;
+  height: 0.1rem;
+  transition: width 0.3s cubic-bezier(0.55, 0, 0.98, 0.54),
+    background-color 0.5s 0.3s;
+  width: 0;
+}
+
+.second-nav-link::after {
+  justify-self: end;
+}
+
+.second-nav-item:hover .second-nav-link::before,
+.second-nav-item:hover .second-nav-link::after {
+  background-color: #eece1a;
+  width: 100%;
+}
+
+.second-nav-item:first-child {
+  position: relative;
+}
+
+/* end of navbar */
