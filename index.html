@@ -11,10 +11,48 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- TODO: Update '<title>'. -->
     <title>Trail Hikes</title>
   </head>
   <body>
+    <!-- modal box -->
+    <input type="checkbox" id="show-hide-forms" hidden>
+
+    <div class="forms-wrapper">
+        <label for="show-hide-forms" class="x-btn">&#10005;</label>
+        <input type="checkbox" id="show-hide-form" hidden>
+
+        <form id="myForm" class="Add-form">
+            <h3 class="form-heading">TrailHikes:<span class="section"> Add your hike</span></h3>
+            <div class="trailname-inputs-wrapper">
+                <label for="trailName"></label>
+                <input type="text" class="trail-name" id="trailName" placeholder="Trail Name">
+                <label for="miles"></label>
+                <input type="text" class="miles" id="miles" placeholder="Miles">
+            </div>
+            <div class="trailname-inputs-wrapper">
+                <label for="terrain"></label>
+                <input type="text" class="terrain" id="terrain" placeholder="Terrain">
+                <label for="difficulty"></label>
+                <input type="text" class="difficulty" id="difficulty" placeholder="Difficulty">
+            </div>
+            <div class="trailname-inputs-wrapper">
+                <label for="time"></label>
+                <input type="text" class="time" id="time" placeholder="Time">
+            </div>
+            <div class="trail-location">
+                <label for="location"></label>
+                <input type="text" class="form-input" id="location" placeholder="Location (i.e. name of park, river, ...)">
+            </div>
+            <div class="trail-description"></div>
+                <label for="description"></label>
+                <textarea class="form-input" placeholder="Description" id="description" cols="50" rows="4"></textarea>
+                <label for="display"></label>
+                <input type="display" id="display" class="form-btn" value="Enter Your Hike" onclick="addRow()">
+                <input type="reset" value="reset" class="form-btn" name="reset" onclick="return resetForm(this.form);">
+        </form>
+    </div>
+
+<!-- end of modal -->
     <!-- 'Connect' JS to this HTML file. -->
     <script src="./scripts.js"></script>
   </body>
