@@ -1,15 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 function addRow() {
-  let table = document.getElementById("results");
+  const table = document.getElementById("results");
 
-  let row = document.createElement("tr");
-  let td1 = document.createElement("td");
-  let td2 = document.createElement("td");
-  let td3 = document.createElement("td");
-  let td4 = document.createElement("td");
-  let td5 = document.createElement("td");
-  let td6 = document.createElement("td");
-  let td7 = document.createElement("td");
+  const row = document.createElement("tr");
+  const td1 = document.createElement("td");
+  const td2 = document.createElement("td");
+  const td3 = document.createElement("td");
+  const td4 = document.createElement("td");
+  const td5 = document.createElement("td");
+  const td6 = document.createElement("td");
+  const td7 = document.createElement("td");
 
   td1.innerHTML = document.getElementById("trailName").value;
   td2.innerHTML = document.getElementById("miles").value;
