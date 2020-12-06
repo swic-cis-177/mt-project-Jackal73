@@ -154,7 +154,8 @@ body {
 /* end of navbar */
 
 /* modal box */
-.trail-add-in-header {
+.trail-add-in-header,
+.photo-header {
   background-color: #373a36;
   border-bottom: 0.1rem solid #eece1a;
   border-radius: 20%;
@@ -170,7 +171,8 @@ body {
 }
 
 .trail-add-in,
-table {
+table,
+.photo {
   border-bottom: 0.3rem solid #373a36;
   font-size: 2rem;
   grid-column: 2 / 10;
