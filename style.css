@@ -385,6 +385,220 @@ table {
 
 /* end of modal box */
 
+/* banner */
+.banner {
+  grid-column: 2 / 10;
+  grid-row: 4 / 5;
+  position: relative;
+}
+
+.slideshow {
+  height: 100%;
+  overflow: hidden;
+}
+
+.slideshow-wrapper {
+  animation: slideshow 40s infinite;
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: 400%;
+}
+
+.slide img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+@keyframes slideshow {
+  0% {
+    left: 0;
+  }
+
+  10% {
+    left: 0;
+  }
+
+  15% {
+    left: -100%;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  30% {
+    left: -200%;
+  }
+
+  40% {
+    left: -200%;
+  }
+
+  45% {
+    left: -300%;
+  }
+
+  55% {
+    left: -300%;
+  }
+
+  60% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -100%;
+  }
+
+  85% {
+    left: -100%;
+  }
+
+  90% {
+    left: 0;
+  }
+}
+
+.slide-btn {
+  background-color: #bbb;
+  border: 0.2rem solid #eece1a;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 1.3rem;
+  outline: none;
+  position: absolute;
+  top: 95%;
+  transform: translateX(-50%);
+  width: 1.3rem;
+  z-index: 10;
+}
+
+.slide-btn:hover {
+  background-color: #eece1a;
+  border: 0.2rem solid #bbb;
+}
+
+.slide-btn:focus {
+  background-color: #373a36;
+}
+
+.slide-btn-1 {
+  left: 47%;
+}
+
+.slide-btn-2 {
+  left: 49%;
+}
+
+.slide-btn-3 {
+  left: 51%;
+}
+
+.slide-btn-4 {
+  left: 53%;
+}
+
+.slide-btn-1:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: 0;
+}
+
+.slide-btn-2:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -100%;
+}
+
+.slide-btn-3:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -200%;
+}
+
+.slide-btn-4:focus ~ .slideshow-wrapper {
+  animation: none;
+  left: -300%;
+}
+
+/* end of banner */
+
+/* favorite trails section */
+.favorite-trails {
+  grid-column: 2 / 10;
+  grid-row: 6 / 7;
+}
+
+.favorite-trails-header {
+  color: #373a36;
+  font-size: 4.5rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.favorite-trails-cards {
+  display: grid;
+  grid-gap: 6.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.favorite-trails-card {
+  background-color: #a4a08f;
+  box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+.favorite-trails-img {
+  /* border-radius: .5rem .3rem 0 0; */
+  border-radius: 50%;
+  width: 100%;
+}
+
+.favorite-trails-heading {
+  background-color: #eece1a;
+  border-radius: 0.2rem;
+  color: #8e938c;
+  font-size: 2.7rem;
+  margin: auto;
+  padding: 0.5rem 0;
+  text-align: center;
+  transform: translateY(-50%);
+  width: 80%;
+}
+
+.favorite-trails-paragraph {
+  color: #373a36;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.favorite-trails-btn {
+  background-color: #8e938c;
+  border: 0.1rem solid #373a36;
+  border-radius: 0 0 0.3rem 0.3rem;
+  color: #373a36;
+  cursor: pointer;
+  font-size: 1.9rem;
+  padding: 1.6rem 0;
+  transition: border-radius 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  width: 100%;
+}
+
+.favorite-trails-btn:hover {
+  background-color: #373a36;
+  border: 0.2rem solid #eece1a;
+  border-radius: 20%;
+  color: #eece1a;
+  font-size: 2.3rem;
+  padding: 1.3rem 0;
+}
+
+/* end of favorite trails section */
+
 /* contact */
 .contact {
   background-color: #373a36;
