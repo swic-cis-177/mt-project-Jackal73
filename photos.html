@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" type="image/jpg" href="images/traillogo.jpg">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>TrailHikes</title>
+    </head>
+    <body>
+
+    <!-- modal box -->
+        <input type="checkbox" id="show-hide-forms" hidden>
+        <div class="forms-wrapper">
+            <label for="show-hide-forms" class="x-btn">&#10005;</label>
+            <input type="checkbox" id="show-form" hidden>
+            <div class="show-btns-wrapper">
+                <label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
+                <label for="show-form" class="show-form-btn show-login-form">Log In</label>
+            </div>
+
+            <form class="signup-form">
+                <h3 class="form-heading">TrailHike: <span class="section">Sign Up</span></h3>
+                <div class="fullname-inputs-wrapper">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <input type="text" class="form-input" placeholder="Username">
+                <input type="email" class="form-input" placeholder="Email Address">
+                <input type="password" class="form-input" placeholder="Password">
+                <input type="submit" value="SIGN UP" class="form-btn">
+            </form>
+
+            <form class="login-form">
+                <h3 class="form-heading">TrailHike <i>Log In</i></h3>
+                <input type="email" class="form-input" placeholder="Email Address">
+                <input type="password" class="form-input" placeholder="Password">
+                <input type="submit" value="LOG IN" class="form-btn">
+            </form>
+        </div>
+    <!-- end of modal -->
+
+        <div class="container">
+
+    <!-- navbar -->
+            <div class="logo">
+                <h1 class="logo-adjust">
+                    TRAILHIKES
+                </h1>
+                <p class="logo-2">~~A Trail Tracking Application~~</p>
+            </div>
+
+            <nav class="first-nav">
+                <ul class="first-nav-list">
+                    <li class="first-nav-item">
+                        <a href="#" class="first-nav-link"><label for="show-hide-forms"><i class="fas fa-sign-in-alt"></i>Sign Up / Log In</label></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="second-nav">
+                <ul class="second-nav-list">
+                    <li class="second-nav-item">
+                        <a href="index.html" class="second-nav-link">Home</a>
+                    </li>
+                    <li class="second-nav-item">
+                        <a href="trails-hiked.html" class="second-nav-link">Trails Hiked</a>
+                    </li>
+                    <li class="second-nav-item">
+                        <a href="photos.html" class="second-nav-link">Photos</a>
+                    </li>
+
+                </ul>
+            </nav>
+    <!-- end of navbar -->
+        </div>
+
+        <!-- gallery -->
+        <!--        <section class="gallery"><div>-->
+        <!--            <h1 class="favorite-trails-header">-->
+        <!--                Photos-->
+        <!--            </h1>-->
+        <!--        </div>-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-1">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-2">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-3">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-4">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-5">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-6">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-7">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-8">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-9">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-10">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-11">-->
+        <!--            <img src="images/.jpeg" class="gallery-img gallery-img-12">-->
+        <!--        </section>-->
+        <!-- end of gallery -->
+
+    <script src="./scripts.js"></script>
+
+    </body>
+</html>
