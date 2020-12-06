@@ -442,8 +442,10 @@ table {
 .company-logo {
   color: #eece1a;
   cursor: pointer;
-  font-weight: bold;
+
+  /* font-weight: bold; */
 }
+
 .company-logo:hover {
   color: #373a36;
 }
