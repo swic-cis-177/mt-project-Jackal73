@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
+
+    <!-- Add some Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Trail Hikes</title>
+  </head>
+  <body>
+    <!-- modal box -->
+    <input type="checkbox" id="show-hide-forms" hidden />
+
+    <div class="forms-wrapper">
+      <label for="show-hide-forms" class="x-btn">&#10005;</label>
+      <input type="checkbox" id="show-hide-form" hidden />
+
+      <form id="myForm" class="Add-form">
+        <h3 class="form-heading">
+          TrailHikes:<span class="section"> Add your hike</span>
+        </h3>
+        <div class="trailname-inputs-wrapper">
+          <label for="trailName"></label>
+          <input
+            type="text"
+            class="trail-name"
+            id="trailName"
+            placeholder="Trail Name"
+          />
+          <label for="miles"></label>
+          <input type="text" class="miles" id="miles" placeholder="Miles" />
+        </div>
+        <div class="trailname-inputs-wrapper">
+          <label for="terrain"></label>
+          <input
+            type="text"
+            class="terrain"
+            id="terrain"
+            placeholder="Terrain"
+          />
+          <label for="difficulty"></label>
+          <input
+            type="text"
+            class="difficulty"
+            id="difficulty"
+            placeholder="Difficulty"
+          />
+        </div>
+        <div class="trailname-inputs-wrapper">
+          <label for="time"></label>
+          <input type="text" class="time" id="time" placeholder="Time" />
+        </div>
+        <div class="trail-location">
+          <label for="location"></label>
+          <input
+            type="text"
+            class="form-input"
+            id="location"
+            placeholder="Location (i.e. name of park, river, ...)"
+          />
+        </div>
+        <div class="trail-description"></div>
+        <label for="description"></label>
+        <textarea
+          class="form-input"
+          placeholder="Description"
+          id="description"
+          cols="50"
+          rows="4"
+        ></textarea>
+        <label for="display"></label>
+
+        <!-- TODO{shawn}: Remove all inline click handlers.  -->
+        <input
+          type="display"
+          id="display"
+          class="form-btn"
+          value="Enter Your Hike"
+          onclick="addRow()"
+        />
+        <input
+          type="reset"
+          value="reset"
+          class="form-btn"
+          name="reset"
+          onclick="return resetForm(this.form);"
+        />
+      </form>
+    </div>
+    <!-- end of modal -->
+
+    <div class="container">
+      <!-- navbar -->
+      <div class="logo">
+        <h1 class="logo-adjust">TRAILHIKES</h1>
+        <p class="logo-2">~~A Trail Tracking Application~~</p>
+      </div>
+
+      <nav class="first-nav">
+        <ul class="first-nav-list">
+          <li class="first-nav-item">
+            <a href="#" class="first-nav-link"
+              ><label for="show-hide-forms"
+                ><i class="fas fa-sign-in-alt"></i>Add A Hike</label
+              ></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="second-nav">
+        <ul class="second-nav-list">
+          <li class="second-nav-item">
+            <a href="index.html" class="second-nav-link">Home</a>
+          </li>
+          <li class="second-nav-item">
+            <a href="trails-hiked.html" class="second-nav-link">Trails Hiked</a>
+          </li>
+          <li class="second-nav-item">
+            <a href="photos.html" class="second-nav-link">Photos</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- end of navbar -->
+
+      <div class="trail-add-in">
+        <h1 class="trail-add-in-header">
+          TRAILS <span class="header-add-in">HIKED</span>
+        </h1>
+        <p class="trail-info"></p>
+        <table border="1" id="results" width="100%">
+          <tr>
+            <th id="1trailName">TrailName</th>
+            <th id="1miles">Miles</th>
+            <th id="1terrain">Terrain</th>
+            <th id="1difficulty">Difficulty</th>
+            <th id="1time">Time</th>
+            <th id="1location">Location</th>
+            <th id="1description">Description</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- contact -->
+    <section class="contact">
+      <h1 class="contact-heading">Please join us!</h1>
+      <form class="contact-form">
+        <input
+          type="text"
+          class="contact-input"
+          placeholder="Enter email address"
+        />
+        <input type="submit" class="contact-btn" value="Sign Up" />
+      </form>
+    </section>
+    <!-- end of contact -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>
+        &copy;2020
+        <a href="https://www.kbldevelopers.com"
+          ><span class="company-logo">kblDevelopers</span></a
+        >. All Rights Reserved
+      </p>
+    </footer>
+    <!-- end of footer -->
+
+    <!-- TODO{shawn}: Use template tags and 'cloneNode', etc. as seen in the student app.  -->
+
+    <!-- 'Connect' JS to this HTML file. -->
+    <script src="./scripts.js" type="module"></script>
+  </body>
+</html>
