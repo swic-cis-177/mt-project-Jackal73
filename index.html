@@ -1,161 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/jpg" href="images/traillogo.jpg">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>TrailHikes</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="shortcut icon" type="image/jpg" href="images/traillogo.jpg"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
 
+    <!-- Add some Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Trail Hikes</title>
+  </head>
+  <body>
     <!-- modal box -->
-    <input type="checkbox" id="show-hide-forms" hidden>
+    <input type="checkbox" id="show-hide-forms" hidden />
+
     <div class="forms-wrapper">
-        <label for="show-hide-forms" class="x-btn">&#10005;</label>
-        <input type="checkbox" id="show-form" hidden>
-        <div class="show-btns-wrapper">
-            <label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
-            <label for="show-form" class="show-form-btn show-login-form">Log In</label>
+      <label for="show-hide-forms" class="x-btn">&#10005;</label>
+      <input type="checkbox" id="show-hide-form" hidden />
+
+      <form id="myForm" class="Add-form">
+        <h3 class="form-heading">
+          TrailHikes:<span class="section"> Add your hike</span>
+        </h3>
+        <div class="trailname-inputs-wrapper">
+          <label for="trailName"></label>
+          <input
+            type="text"
+            class="trail-name"
+            id="trailName"
+            placeholder="Trail Name"
+          />
+          <label for="miles"></label>
+          <input type="text" class="miles" id="miles" placeholder="Miles" />
         </div>
+        <div class="trailname-inputs-wrapper">
+          <label for="terrain"></label>
+          <input
+            type="text"
+            class="terrain"
+            id="terrain"
+            placeholder="Terrain"
+          />
+          <label for="difficulty"></label>
+          <input
+            type="text"
+            class="difficulty"
+            id="difficulty"
+            placeholder="Difficulty"
+          />
+        </div>
+        <div class="trailname-inputs-wrapper">
+          <label for="time"></label>
+          <input type="text" class="time" id="time" placeholder="Time" />
+        </div>
+        <div class="trail-location">
+          <label for="location"></label>
+          <input
+            type="text"
+            class="form-input"
+            id="location"
+            placeholder="Location (i.e. name of park, river, ...)"
+          />
+        </div>
+        <div class="trail-description"></div>
+        <label for="description"></label>
+        <textarea
+          class="form-input"
+          placeholder="Description"
+          id="description"
+          cols="50"
+          rows="4"
+        ></textarea>
+        <label for="display"></label>
 
-        <form class="signup-form">
-            <h3 class="form-heading">TrailHikes:<span class="section"> Sign Up</span></h3>
-            <div class="fullname-inputs-wrapper">
-                <label for="first-name" id="first-name"></label>
-                <input  autofocus type="text" name="first-name" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-            </div>
-            <input type="text" class="form-input" placeholder="Username">
-            <input type="email" class="form-input" placeholder="Email Address">
-            <input type="password" class="form-input" placeholder="Password">
-            <input type="submit" value="SIGN UP" class="form-btn">
-        </form>
+        <!-- TODO{shawn}: Remove all inline click handlers.  -->
+        <input
+          type="display"
+          id="display"
+          class="form-btn"
+           value="Enter Your Hike"
 
-        <form class="login-form">
-            <h3 class="form-heading">TrailHikes:<span class="section"> Log In</span></h3>
-            <input type="email" class="form-input" placeholder="Email Address">
-            <input type="password" class="form-input" placeholder="Password">
-            <input type="submit" value="LOG IN" class="form-btn">
-        </form>
+          onclick="addRow()"
+        />
+        <input
+          type="reset"
+          value="reset"
+          class="form-btn"
+          name="reset"
+          onclick="return resetForm(this.form);"
+        />
+      </form>
     </div>
     <!-- end of modal -->
+
     <div class="container">
+      <!-- navbar -->
+      <div class="logo">
+        <h1 class="logo-adjust">TRAILHIKES</h1>
+        <p class="logo-2">~~A Trail Tracking Application~~</p>
+      </div>
 
-        <!-- navbar -->
-            <div class="logo">
-                <h1 class="logo-adjust">
-                    TRAILHIKES
-                </h1>
-                <p class="logo-2">~~A Trail Tracking Application~~</p>
-            </div>
+      <nav class="first-nav">
+        <ul class="first-nav-list">
+          <li class="first-nav-item">
+            <a href="#" class="first-nav-link"
+              ><label for="show-hide-forms"
+                ><i class="fas fa-sign-in-alt"></i>Add A Hike</label
+              ></a
+            >
+          </li>
+        </ul>
+      </nav>
 
-        <nav class="first-nav">
-            <ul class="first-nav-list">
-                <li class="first-nav-item">
-                    <a href="#" class="first-nav-link"><label for="show-hide-forms"><i class="fas fa-sign-in-alt"></i>Sign Up / Log In</label></a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="second-nav">
+        <ul class="second-nav-list">
+          <li class="second-nav-item">
+            <a href="index.html" class="second-nav-link">Home</a>
+          </li>
+          <li class="second-nav-item">
+            <a href="trails-hiked.html" class="second-nav-link">Trails Hiked</a>
+          </li>
+          <li class="second-nav-item">
+            <a href="photos.html" class="second-nav-link">Photos</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- end of navbar -->
 
-        <nav class="second-nav">
-            <ul class="second-nav-list">
-                <li class="second-nav-item">
-                    <a href="index.html" class="second-nav-link">Home</a>
-                </li>
-                <li class="second-nav-item">
-                    <a href="trails-hiked.html" class="second-nav-link">Trails Hiked</a>
-                </li>
-                <li class="second-nav-item">
-                    <a href="photos.html" class="second-nav-link">Photos</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- end of navbar -->
+      <div class="trail-add-in">
+        <h1 class="trail-add-in-header">
+          TRAILS <span class="header-add-in">HIKED</span>
+        </h1>
+        <p class="trail-info"></p>
 
-        <!-- banner -->
-        <section class="banner">
-        <div class="banner-content">
-            </div>
-            <div class="slideshow">
-                <button class="slide-btn slide-btn-1"></button>
-                <button class="slide-btn slide-btn-2"></button>
-                <button class="slide-btn slide-btn-3"></button>
-                <button class="slide-btn slide-btn-4"></button>
-                <div class="slideshow-wrapper">
-                    <div class="slide">
-                        <img src="images/slide-img-1.jpg"  alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="images/slide-img-2.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="images/slide-img-3.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="images/slide-img-4.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end of banner -->
+        <table border="1" id="results" width="100%">
+          <tr>
+            <th id="1trailName">TrailName</th>
+            <th id="1miles">Miles</th>
+            <th id="1terrain">Terrain</th>
+            <th id="1difficulty">Difficulty</th>
+            <th id="1time">Time</th>
+            <th id="1location">Location</th>
+            <th id="1description">Description</th>
+          </tr>
+        </table>
 
-        <!-- favorite trails section -->
-        <section class="favorite-trails">
-            <h1 class="favorite-trails-header">
-                Favorite Trails
-            </h1>
-            <div class="favorite-trails-cards">
-                <div class="favorite-trails-card">
-                    <img src="images/favorite-img-1.jpg" class="favorite-trails-img" alt="">
-                    <h2 class="favorite-trails-heading">Creek Canyon Lower</h2>
-                    <p class="favorite-trails-paragraph">Distance: 4.7 miles</p>
-                    <p class="favorite-trails-paragraph">Difficulty: Moderate</p>
-                    <button class="favorite-trails-btn">More Info</button>
-                </div>
-                <div class="favorite-trails-card">
-                    <img src="images/favorite-img-2.jpg" class="favorite-trails-img" alt="">
-                    <h2 class="favorite-trails-heading">Iaaca River Falls</h2>
-                    <p class="favorite-trails-paragraph">Distance: 7.2 miles</p>
-                    <p class="favorite-trails-paragraph">Difficulty: Moderate/Hard</p>
-                    <button class="favorite-trails-btn">More Info</button>
-                </div>
-                <div class="favorite-trails-card">
-                    <img src="images/favorite-img-3.jpg" class="favorite-trails-img" alt="">
-                    <h2 class="favorite-trails-heading">Black River Trail</h2>
-                    <p class="favorite-trails-paragraph">Distance: 5.7 miles</p>
-                    <p class="favorite-trails-paragraph">Difficulty: Easy</p>
-                    <button class="favorite-trails-btn">More Info</button>
-                </div>
-            </div>
-        </section>
-        <!-- end of favorite trails section -->
+        </div>
+        </div>
 
-        <!-- contact -->
-        <section class="contact">
-            <h1 class="contact-heading">Please join us!</h1>
-            <form class="contact-form">
-                <input type="text" class="contact-input" placeholder="Enter email address">
-                <input type="submit" class="contact-btn" value="Sign Up">
-            </form>
-        </section>
-        <!-- end of contact -->
 
-        <!-- footer -->
-        <footer class="footer">
-            <p>
-                &copy;2020
-                <a href="https://www.kbldevelopers.com"
-                ><span class="company-logo">kblDevelopers</span></a
-                >. All Rights Reserved
-            </p>
-        </footer>
-        <!-- end of footer -->
-    </div>
 
-<script src="./scripts.js"></script>
+    <!-- contact -->
+    <section class="contact">
+      <h1 class="contact-heading">Please join us!</h1>
+      <form class="contact-form">
+        <input
+          type="text"
+          class="contact-input"
+          placeholder="Enter email address"
+        />
+        <input type="submit" class="contact-btn" value="Sign Up" />
+      </form>
+    </section>
+    <!-- end of contact -->
 
-</body>
+    <!-- footer -->
+    <footer class="footer">
+      <p>
+        &copy;2020
+        <a href="https://www.kbldevelopers.com"
+          ><span class="company-logo">kblDevelopers</span></a
+        >. All Rights Reserved
+      </p>
+    </footer>
+    <!-- end of footer -->
+
+
+    <!-- TODO{shawn}: Use template tags and 'cloneNode', etc. as seen in the student app.  -->
+
+    <!-- 'Connect' JS to this HTML file. -->
+    <script src="./scripts.js" type="module"></script>
+  </body>
 </html>
